@@ -64,7 +64,6 @@ export function addComidaToDia(dia: number, comida: Comida) {
   if (idx >= 0) {
     data.dias[idx].comidas.push(comida);
     const total = data.dias[idx].comidas.reduce((s, c) => s + c.kcal, 0);
-    data.dias[idx].kcal = total as any;
   }
   saveRetoData(data);
   return data;
